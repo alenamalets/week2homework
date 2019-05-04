@@ -18,8 +18,7 @@ class ShoppingCart {
     }
     total() {
         return this.items.reduce((totalSum, currentItem) => {
-            const itemPrice = currentItem.quantity * currentItem.pricePerUnit;
-            return totalSum + itemPrice;
+            return totalSum + (currentItem.quantity * currentItem.pricePerUnit);
         }, 0)
     }
 }
