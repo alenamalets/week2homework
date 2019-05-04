@@ -17,9 +17,8 @@ class ShoppingCart {
         this.items = [];
     }
     total() {
-        return this.items.reduce((totalSum, currentItem) => {
-            return totalSum + (currentItem.quantity * currentItem.pricePerUnit);
-        }, 0)
+        return this.items.reduce((totalSum, currentItem) => 
+            totalSum + (currentItem.quantity * currentItem.pricePerUnit), 0)
     }
 }
 

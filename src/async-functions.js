@@ -16,11 +16,8 @@ function addSomePromises(somePromise) {
 }
 
 function promiseToGiveItBackLater(value) {
-    return new Promise((resolve) => {
-        function doSmth() {
-            resolve(value)
-        }
-        setTimeout(doSmth, 100)
+    return new Promise(resolve => {
+        giveItBackLater(value, resolve)
     })
 }
 
